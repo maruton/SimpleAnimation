@@ -208,4 +208,21 @@ public partial class SimpleAnimation: MonoBehaviour
         get { return GetState(name); }
     }
 
+    // Begin: (ADD)
+    public bool isPlayEnd(string stateName) {
+        float t = GetState(stateName).normalizedTime;
+        if (t >= 1.0) {
+            return (true);
+        }
+        return (false);
+    }
+    public float GetNormalizeTime(string stateName) {
+        float t = GetState(stateName).normalizedTime;
+        return (t);
+    }
+
+	public void SetSpeed(string stateName, float speed) {
+		GetState(stateName).speed = speed;
+	}
+	// End: (ADD)
 }
