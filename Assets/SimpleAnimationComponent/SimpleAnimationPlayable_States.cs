@@ -319,12 +319,14 @@ public partial class SimpleAnimationPlayable : PlayableBehaviour
 
         public void Pause()
         {
-            m_Playable.SetPlayState(PlayState.Paused);
+			// m_Playable.SetPlayState(PlayState.Paused); // Obsolete: 'SetPlayState() has been deprecated. Use Play(), Pause() or SetDelay() instead'
+			m_Playable.Pause(); // (ADD)
         }
 
         public void Play()
         {
-            m_Playable.SetPlayState(PlayState.Playing);
+            // m_Playable.SetPlayState(PlayState.Playing); // Obsolete: 'SetPlayState() has been deprecated. Use Play(), Pause() or SetDelay() instead'
+			m_Playable.Play(); // (ADD)
         }
 
         public void Stop()
